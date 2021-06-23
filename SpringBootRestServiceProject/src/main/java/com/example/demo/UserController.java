@@ -16,14 +16,15 @@ public class UserController {
 //	@GetMapping
 //	public String getUsers() {
 //		return "http get request was sent";
-//	}
+//	} }
 
+	//example- http://localhost:8080/users?page=5&limit=2
 	@GetMapping
 	public String getUsers(@RequestParam(value="page") int pageNo, @RequestParam(value="limit") int limitNo) {
 		return "http get request was sent using query paramenter and value of page is  :"+pageNo+"   and limit no is :  "+limitNo;
 	}
 	
-	
+	//
 	@GetMapping(path = "/{userID}") // path parameter
 	public String getUser(@PathVariable String userID) {
 
@@ -49,3 +50,4 @@ public class UserController {
 	}
 
 }
+
