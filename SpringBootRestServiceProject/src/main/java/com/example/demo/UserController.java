@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/users")
 public class UserController {
 
+//	//example- http://localhost:8080/user
 //	@GetMapping
 //	public String getUsers() {
 //		return "http get request was sent";
@@ -24,7 +25,7 @@ public class UserController {
 		return "http get request was sent using query paramenter and value of page is  :"+pageNo+"   and limit no is :  "+limitNo;
 	}
 	
-	//
+	//example- http://localhost:8080/user/55
 	@GetMapping(path = "/{userID}") // path parameter
 	public String getUser(@PathVariable String userID) {
 
